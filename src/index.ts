@@ -1,6 +1,6 @@
 import express from 'express';
 import morgan from 'morgan';
-import { cat } from './ipfs.js';
+import { cat } from './ipfs';
 
 export const app = express();
 app.use(morgan('common'));
@@ -13,6 +13,6 @@ app.get('/ipfs/:cid', async (req, res) => {
 	}
 })
 
-app.listen(8080, () => {
-	console.log('Listening on 8080');
+app.listen(8888, () => {
+	console.log('Listening on 8888');
 })
