@@ -7,6 +7,7 @@ app.use(morgan('common'));
 
 app.get('/ipfs/:cid', async (req, res) => {
 	try {
+		res.header('Access-Control-Allow-Origin', '*')
 		res.send(await cat(req.params.cid))
 	} catch(e) {
 		console.error(e);
